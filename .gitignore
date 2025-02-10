@@ -1,0 +1,68 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+# misc
+.DS_Store
+
+# logs
+logs
+*.log
+pnpm-debug.log*
+
+# environment
+.env
+.env.*
+!.env.example
+
+# typescript
+*.tsbuildinfo
+
+# editors
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# files
+*.local
+*.local.*
+*.temp.*
+
+# next.js
+.next/
+build/
+next-env.d.ts
+out/
+
+# playwright
+playwright-report/
+playwright/.cache/
+
+# prisma
+prisma/*.db
+prisma/*.db-journal
+tests/prisma/
+
+# react router / remix
+.cache/
+.react-router/
+build/
+public/build/
+server-build/
+
+# tanstack
+.output
+.vinxi
+
+# vite
+dist
+dist-ssr
+
+# vitest
+blob-report/
+coverage/
+test-results/
+
+# vercel
+.vercel

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "App",
+
+  "extends": "./tsconfig.base.json",
+
+  "include": ["src"],
+
+  "compilerOptions": {
+    /** Projects */
+    "tsBuildInfoFile": "./node_modules/.cache/tsconfig.app.tsbuildinfo",
+
+    /** Language and Environment */
+    "target": "ES2022",
+    "lib": ["ES2024", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+
+    /** Modules */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "rootDirs": ["."],
+    "paths": {
+      "#src/*": ["./src/*"]
+    }
+  }
+}
