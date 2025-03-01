@@ -7,15 +7,15 @@
   "include": ["src"],
 
   "compilerOptions": {
-    /** Projects */
+    /* Projects */
     "tsBuildInfoFile": "./node_modules/.cache/tsconfig.app.tsbuildinfo",
 
-    /** Language and Environment */
+    /* Language and Environment */
     "target": "ES2022",
     "lib": ["ES2024", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
 
-    /** Modules */
+    /* Modules */
     "module": "ESNext",
     "moduleResolution": "bundler",
     "rootDirs": ["."],
