@@ -1,11 +1,10 @@
 // @ts-check
+import eslintReact from "@eslint-react/eslint-plugin";
 import { includeIgnoreFile } from "@eslint/compat";
 import eslintJs from "@eslint/js";
 import pluginJson from "@eslint/json";
 import pluginMarkdown from "@eslint/markdown";
 import pluginJsxA11y from "eslint-plugin-jsx-a11y";
-import pluginReact from "eslint-plugin-react";
-import pluginReactHooks from "eslint-plugin-react-hooks";
 import pluginReactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
 import path from "node:path";
@@ -72,20 +71,7 @@ const config = [
 
   // React
   {
-    ...pluginReact.configs.flat.recommended,
-    files: ["**/*.ts", "**/*.tsx"],
-    settings: { react: { version: "detect" } },
-  },
-
-  // React JSX Runtime
-  {
-    ...pluginReact.configs.flat["jsx-runtime"],
-    files: ["**/*.ts", "**/*.tsx"],
-  },
-
-  // React Hooks
-  {
-    ...pluginReactHooks.configs["recommended-latest"],
+    ...eslintReact.configs["recommended-type-checked"],
     files: ["**/*.ts", "**/*.tsx"],
   },
 
