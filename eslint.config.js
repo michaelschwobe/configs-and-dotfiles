@@ -50,7 +50,7 @@ const config = [
 
   // TypeScript
   ...[
-    ...tseslint.configs.recommended,
+    ...tseslint.configs.strictTypeChecked,
     ...tseslint.configs.stylisticTypeChecked,
   ].map((conf) => ({
     ...conf,
