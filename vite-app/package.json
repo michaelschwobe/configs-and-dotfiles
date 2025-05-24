@@ -1,0 +1,75 @@
+{
+  "name": "configs-and-dotfiles-vite-app",
+  "description": "Personal configurations and dotfiles for vite applications.",
+  "keywords": [
+    "configs",
+    "dotfiles",
+    "settings",
+    "preferences",
+    "vite"
+  ],
+  "homepage": "https://github.com/michaelschwobe/configs-and-dotfiles/vite-app",
+  "repository": "github:michaelschwobe/configs-and-dotfiles",
+  "author": {
+    "name": "Michael Schwobe",
+    "email": "mschwobe@gmail.com",
+    "url": "https://schwobe.dev"
+  },
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "imports": {
+    "#src/*": "./src/*"
+  },
+  "scripts": {
+    "build": "vite build",
+    "clean": "rm -rf .cache/ && rm -rf .next/ && rm -rf .react-router/ && rm -rf build/ && rm -rf coverage/ && rm -rf dist/ && rm -rf dist-ssr/ && rm -rf out/ && rm -rf playwright-report/ && rm -rf public/build/ && rm -rf test-results/ && rm -rf tests/prisma/ && rm -rf tsconfig.tsbuildinfo && rm -rf node_modules/.cache/",
+    "dev": "vite",
+    "format": "prettier --cache --ignore-unknown --log-level=warn --write .",
+    "knip": "knip",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "nuke": "pnpm run clean && rm -rf node_modules",
+    "preview": "vite preview",
+    "setup": "pnpm install && pnpm run build",
+    "typecheck": "tsc --build -noEmit",
+    "validate": "pnpm run clean && pnpm run typecheck && pnpm run lint && pnpm run knip"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@eslint-react/eslint-plugin": "^1.49.0",
+    "@eslint/compat": "^1.2.9",
+    "@eslint/js": "^9.27.0",
+    "@eslint/json": "^0.12.0",
+    "@eslint/markdown": "^6.4.0",
+    "@tailwindcss/vite": "^4.1.7",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "@typescript-eslint/utils": "^8.32.1",
+    "@vitejs/plugin-react": "^4.5.0",
+    "cva": "1.0.0-beta.3",
+    "eslint": "^9.27.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.1.0",
+    "knip": "^5.58.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1",
+    "vite": "^6.3.5",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "engines": {
+    "node": ">=22.16.0"
+  }
+}

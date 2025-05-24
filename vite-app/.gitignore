@@ -1,0 +1,24 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+# misc
+.DS_Store
+
+# logs
+logs
+*.log
+pnpm-debug.log*
+
+# environment
+.env
+.env.*
+!.env.example
+
+# typescript
+*.tsbuildinfo
+
+# vite
+dist
+dist-ssr

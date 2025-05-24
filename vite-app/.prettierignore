@@ -1,0 +1,16 @@
+# See https://prettier.io/docs/en/ignore for more about ignoring files.
+
+# lockfiles
+package-lock.json
+pnpm-*.yaml
+
+# msw
+public/mockServiceWorker.*
+
+# prisma
+prisma/migrations/
+
+# tanstack
+**/build
+**/public
+routeTree.gen.ts

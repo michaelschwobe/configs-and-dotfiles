@@ -1,13 +1,14 @@
 {
-  "name": "configs-and-dotfiles",
-  "description": "This repository contains my personal configurations and dotfiles for various tools and applications.",
+  "name": "configs-and-dotfiles-react-router-app",
+  "description": "Personal configurations and dotfiles for vite applications.",
   "keywords": [
     "configs",
     "dotfiles",
-    "settings",
-    "preferences"
+    "preferences",
+    "react-router",
+    "settings"
   ],
-  "homepage": "https://github.com/michaelschwobe/configs-and-dotfiles",
+  "homepage": "https://github.com/michaelschwobe/configs-and-dotfiles/react-router-app",
   "repository": "github:michaelschwobe/configs-and-dotfiles",
   "author": {
     "name": "Michael Schwobe",
@@ -20,24 +21,28 @@
   "sideEffects": false,
   "type": "module",
   "imports": {
-    "#src/*": "./src/*"
+    "#app/*": "./app/*"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "react-router build",
     "clean": "rm -rf .cache/ && rm -rf .next/ && rm -rf .react-router/ && rm -rf build/ && rm -rf coverage/ && rm -rf dist/ && rm -rf dist-ssr/ && rm -rf out/ && rm -rf playwright-report/ && rm -rf public/build/ && rm -rf test-results/ && rm -rf tests/prisma/ && rm -rf tsconfig.tsbuildinfo && rm -rf node_modules/.cache/",
-    "dev": "vite",
+    "dev": "react-router dev",
     "format": "prettier --cache --ignore-unknown --log-level=warn --write .",
     "knip": "knip",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "nuke": "pnpm run clean && rm -rf node_modules",
-    "preview": "vite preview",
     "setup": "pnpm install && pnpm run build",
-    "typecheck": "tsc --build -noEmit",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc --build -noEmit",
     "validate": "pnpm run clean && pnpm run typecheck && pnpm run lint && pnpm run knip"
   },
   "dependencies": {
+    "@react-router/node": "^7.6.0",
+    "@react-router/serve": "^7.6.0",
+    "isbot": "^5.1.28",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router": "^7.6.0"
   },
   "devDependencies": {
     "@eslint-react/eslint-plugin": "^1.49.0",
@@ -45,14 +50,15 @@
     "@eslint/js": "^9.27.0",
     "@eslint/json": "^0.12.0",
     "@eslint/markdown": "^6.4.0",
+    "@react-router/dev": "^7.6.0",
     "@tailwindcss/vite": "^4.1.7",
     "@total-typescript/ts-reset": "^0.6.1",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/eslint-plugin-jsx-a11y": "^6.10.0",
     "@types/node": "^22.15.21",
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
     "@typescript-eslint/utils": "^8.32.1",
-    "@vitejs/plugin-react": "^4.5.0",
     "cva": "1.0.0-beta.3",
     "eslint": "^9.27.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -61,6 +67,7 @@
     "knip": "^5.58.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "react-router-devtools": "^5.0.6",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.7",
     "typescript": "^5.8.3",
