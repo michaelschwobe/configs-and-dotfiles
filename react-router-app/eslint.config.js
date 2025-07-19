@@ -6,19 +6,21 @@ import pluginJson from "@eslint/json";
 import pluginMarkdown from "@eslint/markdown";
 import pluginJsxA11y from "eslint-plugin-jsx-a11y";
 import pluginReactRefresh from "eslint-plugin-react-refresh";
+import { globalIgnores } from "eslint/config";
 import globals from "globals";
-import path from "node:path";
 import { fileURLToPath } from "node:url";
 import tseslint from "typescript-eslint";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const gitignorePath = path.resolve(__dirname, ".gitignore");
+const gitignorePath = fileURLToPath(new URL(".gitignore", import.meta.url));
 
-/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
+/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigArray} */
 const config = [
   // Exclusions
-  includeIgnoreFile(gitignorePath),
+  globalIgnores([".*/**"], "Ignore .react-router directory"),
+  {
+    ...includeIgnoreFile(gitignorePath, "Imported .gitignore patterns"),
+    languageOptions: { ecmaVersion: "latest" },
+  },
 
   // Markdown
   {
