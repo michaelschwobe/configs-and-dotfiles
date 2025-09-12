@@ -7,7 +7,7 @@
 const config = {
   ignoreDependencies: ["tailwindcss"],
   entry: ["src/{index,main}.{ts,tsx}", "reset.d.ts"],
-  project: ["**/*.{js,ts,tsx}", "**/.*.{js,ts,tsx}"],
+  project: ["**/*.{js,ts,tsx}"],
 };
 
 export default config;

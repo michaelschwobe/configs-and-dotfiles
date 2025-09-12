@@ -5,9 +5,9 @@
  * @type {import("knip").KnipConfig}
  */
 const config = {
-  ignoreDependencies: ["@react-router/node", "isbot", "tailwindcss"],
-  entry: ["app/{root,routes}.{ts,tsx}", "reset.d.ts"],
-  project: ["**/*.{js,ts,tsx}", "**/.*.{js,ts,tsx}"],
+  ignoreDependencies: ["tailwindcss"],
+  entry: ["app/{root,routes}.{ts,tsx}"],
+  project: ["**/*.{js,ts,tsx}"],
 };
 
 export default config;
