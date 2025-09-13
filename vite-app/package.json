@@ -1,5 +1,7 @@
 {
   "name": "configs-and-dotfiles-vite-app",
+  "version": "1.0.0",
+  "private": true,
   "description": "Personal configurations and dotfiles for vite applications.",
   "keywords": [
     "configs",
@@ -10,14 +12,12 @@
   ],
   "homepage": "https://github.com/michaelschwobe/configs-and-dotfiles/vite-app",
   "repository": "github:michaelschwobe/configs-and-dotfiles",
+  "license": "MIT",
   "author": {
     "name": "Michael Schwobe",
     "email": "mschwobe@gmail.com",
     "url": "https://schwobe.dev"
   },
-  "version": "1.0.0",
-  "license": "MIT",
-  "private": true,
   "sideEffects": false,
   "type": "module",
   "imports": {
@@ -62,6 +62,7 @@
     "globals": "^16.4.0",
     "knip": "^5.63.1",
     "prettier": "^3.6.2",
+    "prettier-plugin-packagejson": "^2.5.19",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.13",
