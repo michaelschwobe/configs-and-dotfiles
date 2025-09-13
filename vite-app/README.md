@@ -35,6 +35,7 @@ You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-re
 
 ```js
 // eslint.config.js
+
 import reactDom from "eslint-plugin-react-dom";
 import reactX from "eslint-plugin-react-x";
 

@@ -1,4 +1,4 @@
-import { type VariantProps, cva } from "#app/lib/css.ts";
+import { cva, type VariantProps } from "#app/lib/css.ts";
 
 export const buttonVariants = cva({
   base: "",

@@ -1,6 +1,5 @@
+import { cx } from "#src/lib/css";
 import { Button } from "#src/ui/button.tsx";
-
-import { cx } from "./lib/css";
 
 export function App() {
   return (

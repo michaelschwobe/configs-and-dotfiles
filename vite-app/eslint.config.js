@@ -1,4 +1,6 @@
 // @ts-check
+
+import { fileURLToPath } from "node:url";
 import eslintReact from "@eslint-react/eslint-plugin";
 import { includeIgnoreFile } from "@eslint/compat";
 import eslintJs from "@eslint/js";
@@ -7,7 +9,6 @@ import pluginMarkdown from "@eslint/markdown";
 import pluginJsxA11y from "eslint-plugin-jsx-a11y";
 import pluginReactRefresh from "eslint-plugin-react-refresh";
 import globals from "globals";
-import { fileURLToPath } from "node:url";
 import tseslint from "typescript-eslint";
 
 const gitignorePath = fileURLToPath(new URL(".gitignore", import.meta.url));
