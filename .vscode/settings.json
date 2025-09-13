@@ -1,13 +1,22 @@
 {
+  "biome.enabled": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit"
   },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "typescript.preferences.autoImportFileExcludePatterns": ["cva"],
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.experimental.classRegex": [
-    ["cva\\(((?:[^()]|\\([^()]*\\))*)\\)", "[\"'`]?([^\"'`]+)[\"'`]?"],
-    ["cx\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ]
+    ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "cva",
+    "cx",
+    "compose"
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
