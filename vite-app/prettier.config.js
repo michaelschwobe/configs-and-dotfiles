@@ -31,7 +31,7 @@ const config = {
     "^(?!.*[.]css$)[./].*$",
     "",
     // Relative CSS modules
-    ".css$",
+    "\\.css$",
   ],
   importOrderTypeScriptVersion: "5.9.2",
 
