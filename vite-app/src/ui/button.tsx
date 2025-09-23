@@ -1,4 +1,4 @@
-import { buttonVariants, type ButtonVariants } from "./button.css.ts";
+import { buttonVariants, type ButtonVariants } from "./button.styles.ts";
 
 export interface ButtonProps
   extends React.ComponentPropsWithRef<"button">,
