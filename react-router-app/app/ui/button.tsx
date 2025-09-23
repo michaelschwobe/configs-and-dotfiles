@@ -1,5 +1,7 @@
 import { buttonVariants, type ButtonVariants } from "./button.styles.ts";
 
+export type ButtonRef = React.Ref<React.ComponentRef<"button">>;
+
 export interface ButtonProps
   extends React.ComponentPropsWithRef<"button">,
     ButtonVariants {}
