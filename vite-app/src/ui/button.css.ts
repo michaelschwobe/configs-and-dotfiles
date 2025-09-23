@@ -1,6 +1,6 @@
-import { cva, type VariantProps } from "#src/lib/css.ts";
+import { tv, type VariantProps } from "tailwind-variants";
 
-export const buttonVariants = cva({
+export const buttonVariants = tv({
   base: "",
   variants: {
     size: {

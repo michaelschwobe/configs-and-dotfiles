@@ -1,5 +1,5 @@
-import { cx } from "#app/lib/css.ts";
 import { Button } from "#app/ui/button.tsx";
+import { twMerge } from "tailwind-merge";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
@@ -43,7 +43,7 @@ export function Welcome() {
             </ul>
           </nav>
           <div>
-            <h1 className={cx("text-4xl font-semibold")}>App</h1>
+            <h1 className={twMerge("text-4xl font-semibold")}>App</h1>
             <Button>Button</Button>
           </div>
         </div>

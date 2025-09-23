@@ -5,7 +5,6 @@
  * @type {import("knip").KnipConfig}
  */
 const config = {
-  ignoreDependencies: ["tailwindcss"],
   entry: ["app/{root,routes}.{ts,tsx}"],
   project: ["**/*.{js,ts,tsx}"],
 };

@@ -14,9 +14,6 @@ importers:
       '@react-router/serve':
         specifier: ^7.9.1
         version: 7.9.1(react-router@7.9.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(typescript@5.9.2)
-      cva:
-        specifier: beta
-        version: 1.0.0-beta.4(typescript@5.9.2)
       isbot:
         specifier: ^5.1.30
         version: 5.1.30
@@ -32,6 +29,9 @@ importers:
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
+      tailwind-variants:
+        specifier: ^3.1.1
+        version: 3.1.1(tailwind-merge@3.3.1)(tailwindcss@4.1.13)
     devDependencies:
       '@eslint-react/eslint-plugin':
         specifier: ^1.53.1
@@ -1839,14 +1839,6 @@ packages:
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
-  cva@1.0.0-beta.4:
-    resolution: {integrity: sha512-F/JS9hScapq4DBVQXcK85l9U91M6ePeXoBMSp7vypzShoefUBxjQTo3g3935PUHgQd+IW77DjbPRIxugy4/GCQ==}
-    peerDependencies:
-      typescript: '>= 4.5.5'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-
   d3-color@3.1.0:
     resolution: {integrity: sha512-zg/chbXyeBtMQ1LbD/WSoW2DpC3I0mpmPdW+ynRTj/x2DAWYrIY7qeZIHidozwV24m4iavr15lNwIwLxRmOxhA==}
     engines: {node: '>=12'}
@@ -3616,6 +3608,16 @@ packages:
 
   tailwind-merge@3.3.1:
     resolution: {integrity: sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==}
+
+  tailwind-variants@3.1.1:
+    resolution: {integrity: sha512-ftLXe3krnqkMHsuBTEmaVUXYovXtPyTK7ckEfDRXS8PBZx0bAUas+A0jYxuKA5b8qg++wvQ3d2MQ7l/xeZxbZQ==}
+    engines: {node: '>=16.x', pnpm: '>=7.x'}
+    peerDependencies:
+      tailwind-merge: '>=3.0.0'
+      tailwindcss: '*'
+    peerDependenciesMeta:
+      tailwind-merge:
+        optional: true
 
   tailwindcss@4.1.13:
     resolution: {integrity: sha512-i+zidfmTqtwquj4hMEwdjshYYgMbOrPzb9a0M3ZgNa0JMoZeFC6bxZvO8yr8ozS6ix2SDz0+mvryPeBs2TFE+w==}
@@ -5670,12 +5672,6 @@ snapshots:
   cssbeautify@0.3.1: {}
 
   csstype@3.1.3: {}
-
-  cva@1.0.0-beta.4(typescript@5.9.2):
-    dependencies:
-      clsx: 2.1.1
-    optionalDependencies:
-      typescript: 5.9.2
 
   d3-color@3.1.0: {}
 
@@ -7831,6 +7827,12 @@ snapshots:
       '@pkgr/core': 0.2.9
 
   tailwind-merge@3.3.1: {}
+
+  tailwind-variants@3.1.1(tailwind-merge@3.3.1)(tailwindcss@4.1.13):
+    dependencies:
+      tailwindcss: 4.1.13
+    optionalDependencies:
+      tailwind-merge: 3.3.1
 
   tailwindcss@4.1.13: {}
 
