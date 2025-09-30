@@ -81,6 +81,7 @@ const config = defineConfig([
     name: "JS TS globals & parserOptions",
     languageOptions: {
       globals: { ...globals.browser },
+      parser: tseslint.parser,
       parserOptions: {
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
