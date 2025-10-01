@@ -13,10 +13,5 @@
   "tailwindCSS.experimental.classRegex": [
     ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
-  "typescript.preferences.autoImportFileExcludePatterns": [
-    "cva",
-    "cx",
-    "compose"
-  ],
   "typescript.updateImportsOnFileMove.enabled": "always"
 }
