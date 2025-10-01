@@ -10,7 +10,6 @@ public/mockServiceWorker.*
 # prisma
 prisma/migrations/
 
-# tanstack
+# react-router
 **/build
 **/public
-routeTree.gen.ts

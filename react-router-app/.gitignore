@@ -19,9 +19,6 @@ pnpm-debug.log*
 # typescript
 *.tsbuildinfo
 
-# react router / remix
-.cache/
+# react router
 .react-router/
 build/
-public/build/
-server-build/

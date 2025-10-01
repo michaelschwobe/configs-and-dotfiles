@@ -44,7 +44,7 @@ prisma/*.db
 prisma/*.db-journal
 tests/prisma/
 
-# react router / remix
+# react router / remix / tanstack
 .cache/
 .react-router/
 build/
