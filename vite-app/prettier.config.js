@@ -36,7 +36,7 @@ const config = {
   importOrderTypeScriptVersion: "5.9.2",
 
   // Settings for: prettier-plugin-tailwindcss
-  tailwindFunctions: ["clsx", "cn", "cva", "cx"],
+  tailwindFunctions: ["cn", "tv", "twMerge"],
   tailwindStylesheet: "./src/index.css",
 
   overrides: [
