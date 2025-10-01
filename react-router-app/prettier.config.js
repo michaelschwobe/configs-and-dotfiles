@@ -47,6 +47,12 @@ const config = {
         proseWrap: "preserve",
       },
     },
+    {
+      files: ["**/*.svg"],
+      options: {
+        parser: "html",
+      },
+    },
   ],
 };
 
