@@ -1,4 +1,4 @@
-// @ ts-check
+// @ts-check
 
 import { fileURLToPath } from "node:url";
 import eslintReact from "@eslint-react/eslint-plugin";
@@ -64,6 +64,7 @@ const config = defineConfig([
   // React Refresh
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
+    // @ts-expect-error - `name` exists in lib but not type definition
     name: pluginReactRefresh.configs.vite.name,
     plugins: { reactRefresh: pluginReactRefresh },
     extends: ["reactRefresh/vite"],

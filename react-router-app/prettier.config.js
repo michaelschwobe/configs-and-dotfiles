@@ -37,7 +37,7 @@ const config = {
 
   // Settings for: prettier-plugin-tailwindcss
   tailwindFunctions: ["cn", "tv", "twMerge"],
-  tailwindStylesheet: "./src/index.css",
+  tailwindStylesheet: "./app/app.css",
 
   overrides: [
     {

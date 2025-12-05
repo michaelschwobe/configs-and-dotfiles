@@ -26,6 +26,7 @@
     "moduleResolution": "bundler",
     "rootDirs": [".", "./.react-router/types"],
     "types": ["node", "vite/client"],
+    "baseUrl": ".",
     "paths": {
       "#app/*": ["./app/*"]
     }
