@@ -7,5 +7,9 @@ import tsconfigPaths from "vite-tsconfig-paths";
  * @see https://vite.dev/config/
  */
 export default defineConfig({
-  plugins: [tailwindcss(), react(), tsconfigPaths()],
+  plugins: [
+    tailwindcss(),
+    react({ babel: { plugins: [["babel-plugin-react-compiler"]] } }),
+    tsconfigPaths(),
+  ],
 });
