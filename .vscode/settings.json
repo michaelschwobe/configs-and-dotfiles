@@ -2,6 +2,7 @@
   "biome.enabled": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
+    "source.fixAll.prettier": "explicit",
     "source.organizeImports": "explicit"
   },
   "editor.defaultFormatter": "prettier.prettier-vscode",
